@@ -3,59 +3,70 @@ const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 
-const onCreate = function (event) {
+// Create
+const onRecipeCreate = function (event) {
   event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
+  const data = getFormFields(event.target)
 
-  api.create(data)
-    .then(ui.createSuccess)
-    .catch(ui.createFailure)
+  api.createRecipe(data)
+    .then(ui.createRecipeSuccess)
+    .catch(ui.createRecipeFailure)
 }
 
-const onShow = function (event) {
-  // event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
+// Show
+const onRecipeShow = function (result) {
+  console.log('result from show', result)
+  event.preventDefault()
+  const data = getFormFields(event.target)
 
-  api.show(data)
-    .then(ui.onShowSuccess)
-    .catch(ui.onShowFailure)
+  api.showRecipe(data)
+    .then(ui.showRecipeSuccess)
+    .catch(ui.showRecipeFailure)
 }
 
-const onIndexOne = function (event) {
-  // event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
+// Index One
+const onRecipeIndexUser = function (event) {
+  event.preventDefault()
 
-  api.indexOne(data)
-    .then(ui.onIndexOneSuccess)
-    .catch(ui.onIndexOneFailure)
+  api.indexUserRecipes()
+    .then(ui.indexUserRecipeSuccess)
+    .catch(ui.indexUserRecipeFailure)
 }
 
-const onIndexAll = function (event) {
-  const form = event.target
-  const data = getFormFields(form)
+// Index All
+const onRecipeIndexAll = function (event) {
+  const data = getFormFields(event.target)
 
-  api.indexAll(data)
-    .then(ui.onIndexAllSuccess)
-    .catch(ui.onIndexAllFailure)
+  api.indexAllRecipes(data)
+    .then(ui.indexAllRecipeSuccess)
+    .catch(ui.indexAllRecipeFailure)
 }
 
-const onDestroy = function (event) {
-  // event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
+// Update
+const onRecipeUpdate = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
 
-  api.destroy(data)
-    .then(ui.onDestroySuccess)
-    .catch(ui.onDestroyFailure)
+  api.updateRecipe(data)
+    .then(ui.updateRecipeSuccess)
+    .catch(ui.updateRecipeFailure)
+}
+
+// Delete
+const onRecipeDestroy = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+
+  api.destroyRecipe(data)
+    .then(ui.destroyRecipeSuccess)
+    .catch(ui.destroyRecipeFailure)
 }
 
 module.exports = {
-  onCreate,
-  onShow,
-  onIndexOne,
-  onIndexAll,
-  onDestroy
+  onRecipeCreate,
+  onRecipeShow,
+  onRecipeIndexUser,
+  onRecipeIndexAll,
+  onRecipeUpdate,
+  onRecipeDestroy
 }

@@ -4,7 +4,7 @@ const authEvents = require('./auth/events')
 const recipeEvents = require('./recipes/events')
 
 $(() => {
-  // $('.authenticated').hide()
+  $('.authenticated').hide()
 
   // Auth Listeners
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -13,10 +13,10 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
 
   // Recipe Listeners
-  $('#create-recipe').on('submit', recipeEvents.onCreate)
-  $('#show-recipe').on('click', recipeEvents.onShow)
-  $('#update-recipe').on('submit', recipeEvents.onUpdate)
-  $('#index-all').on('submit', recipeEvents.onIndexAll)
-  $('#index-one').on('submit', recipeEvents.onIndexOne)
-  $('#destroy-recipe').on('submit', recipeEvents.onDestroy)
+  $('#create-recipe').on('submit', recipeEvents.onRecipeCreate)
+  $('#show-recipe').on('submit', recipeEvents.onRecipeShow)
+  $('#index-user').on('click', recipeEvents.onRecipeIndexUser)
+  $('#index-all').on('click', recipeEvents.onRecipeIndexAll)
+  $('#update-recipe').on('submit', recipeEvents.onRecipeUpdate)
+  $('#destroy-recipe').on('submit', recipeEvents.onRecipeDestroy)
 })

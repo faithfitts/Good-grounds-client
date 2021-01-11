@@ -2,18 +2,19 @@
 
 const store = require('./../store')
 
-// Sign-Up Success & Failure Responses
+// Sign-Up Success Response
 const signUpSuccess = function (response) {
   $('#message').text('You have Signed Up Successfully!')
   $('#message').css('color', 'green')
 }
 
+// Sign-Up Failure Response
 const signUpFailure = function (error) {
   $('#message').text('We were unable to sign you up. Please try again. ' + error.message)
   $('#message').css('color', 'red')
 }
 
-// Sign-In Success & Failure Responses
+// Sign-In Success Response
 const signInSuccess = function (response) {
   $('#message').text('You have successfully signed in!')
   $('#message').css('color', 'green')
@@ -24,23 +25,25 @@ const signInSuccess = function (response) {
   $('.authenticated').show()
 }
 
+// Sign-In Failure Response
 const signInFailure = function (error) {
   $('#message').text('Sorry! Sign In Failed: ' + error.responseJSON.message)
   $('#message').css('color', 'red')
 }
 
-// Change-Password Success & Failure
+// Change-Password Success Response
 const changePasswordSuccess = function (response) {
   $('#message').text('You have successfully changed your password!')
   $('#message').css('color', 'green')
 }
 
+// Change-Password Failure Response
 const changePasswordFailure = function (error) {
   $('#message').text('We were unable to change your password. Please try again! ' + error.responseJSON.message)
   $('#message').css('color', 'red')
 }
 
-// Sign-Out Success & Failure
+// Sign-Out Success Response
 const signOutSuccess = function () {
   $('#message').text('Sign Out Successful!')
   $('#message').css('color', 'green')
@@ -54,6 +57,7 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
 }
 
+// Sign-Out Failure Response
 const signOutFailure = function (error) {
   $('#message').text('SignOut Failed: ' + error.responseJSON.message)
   $('#message').css('color', 'red')

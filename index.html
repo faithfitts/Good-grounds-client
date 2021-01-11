@@ -17,6 +17,7 @@
       <p id="message"></p>
 
 
+<!-- Sign-Up -->
   <div class="unauthenticated">
     <span><form id="sign-up">
       <input name="credentials[email]" placeholder="email" type="text" />
@@ -25,6 +26,7 @@
       <button type="submit">Sign Up</button>
     </form></span>
 
+<!-- Sign-In -->
     <form id="sign-in">
       <input name="credentials[email]" placeholder="email" type="text" />
       <input name="credentials[password]" placeholder="password" type="password" />
@@ -32,6 +34,7 @@
     </form>
   </div>
 
+<!-- Change-Password -->
   <div class="authenticated">
     <span><form id="change-password">
       <input name="passwords[old]" placeholder="old password" type="password" />
@@ -39,15 +42,16 @@
       <button type="submit">Change Password</button>
     </form></span>
 
+<!-- Sign-Out -->
     <button id="sign-out">Sign Out</button>
 
-<form id="indexes">
-  <button id="index-one" type="submit">View My Creations</button>
-  <button id="index-all" type="submit">Explore Others Creations</button>
-</form>
+<!-- Index-One -->
+        <button type="button" id="index-user">Explore Your Creations</button>
 
-<!-- <div class="create-button"> -->
-  <!-- <div class="recipe-display"></div> -->
+<!-- Index-All -->
+        <button type="button" id="index-all">Explore All Creations</button>
+
+<!-- Create -->
   <form id="create-recipe">
     <input name="recipe[title]" placeholder="Name of your Creation" type="text" />
     <input name="recipe[description]" placeholder="Description" type="text" />
@@ -56,23 +60,35 @@
     <button type="submit">Make a New Creation</button>
   </form>
 
+<!-- Show -->
+  <form id="show-recipe">
+    <input name="recipe[id]" type="text" placeholder="Recipe ID" />
+    </br>
+    <button type="submit">Search</button>
+  </form>
+    </br>
 
-  <div class="update-button">
-    <form id="update">
-      <input name="recipe[name]" placeholder="Name of your Creation" type="text" />
+  <!-- Update -->
+    <form id="update-recipe">
+      <input name="recipe[id]" placeholder="ID for Recipe" type="text" />
+      <input name="recipe[title]" placeholder="Name of your Creation" type="text" />
       <input name="recipe[description]" placeholder="Description" type="text" />
       <input name="recipe[method]" placeholder="Method" type="text" />
       <input name="recipe[ingredients]" placeholder="List your Ingredients" type="text" />
-    <button type="submit">Update an Existing Creation</button>
+    <button type="submit">Edit an Existing Creation</button>
     </form>
-    </div>
 
-  <button id="destroy">Delete your Creation</button>
+<!-- Destroy -->
+    <form id="destroy-recipe">
+      <input name="recipe[id]" placeholder="ID for Recipe" type="text" />
+       <button type="submit">Delete a Creation</button>
+     </form>
 
   </div>
 
-  <!-- <div id="recipe-display"> -->
-
+<!-- STYLING
+  <div class="drop"></div>
+    <div class="wave"></div> -->
 
     </body>
 </html>
