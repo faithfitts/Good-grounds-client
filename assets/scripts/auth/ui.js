@@ -5,7 +5,7 @@ const store = require('./../store')
 // Sign-Up Success Response
 const signUpSuccess = function (response) {
   $('#message').text('You have Signed Up Successfully!')
-  $('#message').css('color', 'green')
+  $('#message').css('color', 'yellow')
 }
 
 // Sign-Up Failure Response
@@ -16,8 +16,8 @@ const signUpFailure = function (error) {
 
 // Sign-In Success Response
 const signInSuccess = function (response) {
-  $('#message').text('You have successfully signed in!')
-  $('#message').css('color', 'green')
+  $('#message').text('Welcome!')
+  $('#message').css('color', 'yellow')
   store.user = response.user
   console.log(store.user)
 
@@ -34,7 +34,7 @@ const signInFailure = function (error) {
 // Change-Password Success Response
 const changePasswordSuccess = function (response) {
   $('#message').text('You have successfully changed your password!')
-  $('#message').css('color', 'green')
+  $('#message').css('color', 'yellow')
 }
 
 // Change-Password Failure Response
@@ -46,8 +46,7 @@ const changePasswordFailure = function (error) {
 // Sign-Out Success Response
 const signOutSuccess = function () {
   $('#message').text('Sign Out Successful!')
-  $('#message').css('color', 'green')
-  $('.new-game').hide()
+  $('#message').css('color', 'yellow')
   $('.unauthenticated').show()
   $('.authenticated').hide()
 
@@ -57,7 +56,7 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
 }
 
-// Sign-Out Failure Response
+// Sign-Out Success Response
 const signOutFailure = function (error) {
   $('#message').text('SignOut Failed: ' + error.responseJSON.message)
   $('#message').css('color', 'red')

@@ -1,99 +1,32 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
 //
-// body {
-//   background-color: #8B4513;
-//   overflow: hidden;
-// }
-//
-// div {
-//   margin: 175px auto;
-// }
-//
-// .drop {
-//   position: relative;
-// 	width: 20px;
-// 	height: 20px;
-//   top: -30px;
-//   margin: 0 auto;
-// 	background: #A0522D;
-// 	border-radius: 20px;
-//   animation-name: drip;
-//   animation-timing-function: cubic-bezier(1,0,.91,.19);
-//   animation-duration: 10s;
-//   animation-iteration-count: infinite;
-// }
-//
-// .drop:before {
-//   content: "";
-//   position: absolute;
-//   width: 0;
-// 	height: 0;
-// 	border-left: 10px solid transparent;
-// 	border-right: 10px solid transparent;
-// 	border-bottom: 30px solid #A0522D;
-//   top: -22px;
-// }
-//
-// .wave {
-//   position: relative;
-//   opacity: 0;
-//   top: 0;
-// 	width: 2px;
-// 	height: 1px;
-//   border: #FFF 7px solid;
-// 	border-radius: 300px / 150px;
-//   animation-name: ripple;
-//   animation-delay: 10s;
-//   animation-duration: 10s;
-//   animation-iteration-count: infinite;
-// }
-//
-// .wave:after {
-//   content: "";
-//   position: absolute;
-//   opacity: 0;
-//   top: -5px;
-//   left: -5px;
-// 	width: 2px;
-// 	height: 1px;
-//   border: #FFF 5px solid;
-// 	border-radius: 300px / 150px;
-//   animation-name: ripple-2;
-//   animation-duration: 10s;
-//   animation-iteration-count: infinite;
-// }
-//
-// @keyframes ripple {
-//     from {
-//       opacity: 1;
-//     }
-//     to {
-//       width: 600px;
-//       height: 300px;
-//       border-width: 1px;
-//       top: -100px;
-//       opacity: 0;
-//     }
-// }
-//
-// @keyframes ripple-2 {
-//     0% {
-//       opacity: 1;
-//     }
-//     50% {
-//       opacity: 0;
-//     }
-//   100% {
-//     width: 200px;
-//     height: 100px;
-//     border-width: 1px;
-//     top: 100px;
-//     left: 200px;
-//   }
-// }
-//
-// @keyframes drip {
-//     to {
-//       top: 190px;
-//     }
-// }
+
+h1 {
+  font-size: 100px;
+  font-family: 'Aladin', cursive;
+  text-align: static;
+  position: static;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Fondamento', cursive;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Aladin', cursive;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=mike-kenneally-TD4DBagg2wE-unsplash.jpg') center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-family: 'Fondamento', cursive;
+  font-size: 27px;
+  padding: 100px;
+  margin: 50px;
+}
