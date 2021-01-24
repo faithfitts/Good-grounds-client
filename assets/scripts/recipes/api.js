@@ -5,7 +5,6 @@ const store = require('./../store')
 
 // API call for Creating a New Recipe
 const createRecipe = function (data) {
-  // console.log('formData in create is ', formData)
   return $.ajax({
     url: config.apiUrl + '/recipes',
     method: 'POST',
@@ -18,11 +17,9 @@ const createRecipe = function (data) {
 
 // API call for Show a Recipe
 const showRecipe = function (data) {
-  console.log('This is showRecipe data:', data)
   return $.ajax({
     url: config.apiUrl + '/recipes/' + data.recipe.id,
     method: 'GET',
-    // data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -34,7 +31,6 @@ const indexUserRecipes = function () {
   return $.ajax({
     url: config.apiUrl + '/recipes',
     method: 'GET',
-    // data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -43,7 +39,6 @@ const indexUserRecipes = function () {
 
 // API call for Index-All Recipes (all users)
 const indexAllRecipes = function (data) {
-  console.log('formData in indexAll is ', data)
   return $.ajax({
     url: config.apiUrl + '/recipes/all',
     method: 'GET',
@@ -56,7 +51,6 @@ const indexAllRecipes = function (data) {
 
 // API call for Updating a Recipe
 const updateRecipe = function (data) {
-  console.log('This is editRecipe data:', data)
   return $.ajax({
     url: config.apiUrl + '/recipes/' + data.recipe.id,
     method: 'PATCH',
@@ -69,7 +63,6 @@ const updateRecipe = function (data) {
 
 // API call for Deleting a Recipe
 const destroyRecipe = function (data) {
-  console.log('This is destroyRecipe data:', data)
   return $.ajax({
     url: config.apiUrl + '/recipes/' + data.recipe.id,
     method: 'DELETE',

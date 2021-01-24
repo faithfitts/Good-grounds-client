@@ -15,7 +15,6 @@ const onRecipeCreate = function (event) {
 
 // Show
 const onRecipeShow = function (result) {
-  console.log('result from show', result)
   event.preventDefault()
   const data = getFormFields(event.target)
 

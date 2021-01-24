@@ -2,7 +2,6 @@
 
 // Create Success Response
 const createRecipeSuccess = function (response) {
-  console.log(response.recipe)
   $('form').trigger('reset')
   const recipeHtml = ''
   $('#recipe-display').html(recipeHtml)
@@ -18,14 +17,15 @@ const createRecipeSuccess = function (response) {
 
 // Create Failure Response
 const createRecipeFailure = function (error) {
+  $('form').trigger('reset')
   $('#message').text('We were unable to create a new creation. Please try again. ' + error.message)
-  $('#message').css('color', 'red')
+  $('#message').css('color', 'yellow')
 }
 
 // Index-One Success Response
 const indexUserRecipeSuccess = function (response) {
-  // console.log('result from indexOne', result)
   const recipeIndex = response.recipes
+  $('form').trigger('reset')
   $('#recipes-container').css('color', 'white')
   recipeIndex.forEach(recipe => {
     $('#recipes-container').append(`</br><b>Creation ID:</b> ${recipe._id}</br>`)
@@ -38,14 +38,15 @@ const indexUserRecipeSuccess = function (response) {
 
 // Index-One Failure Response
 const indexUserRecipeFailure = function (error) {
+  $('form').trigger('reset')
   $('#message').text('We were unable to display your creations. Please try again. ' + error.message)
-  $('#message').css('color', 'red')
+  $('#message').css('color', 'yellow')
 }
 
 // Index-All Success Response
 const indexAllRecipeSuccess = function (response) {
-  // console.log('Here is everyones recipes', response.recipes)
   const recipeIndex = response.recipes
+  $('form').trigger('reset')
   $('#recipes-container').css('color', 'white')
   recipeIndex.forEach(recipe => {
     $('#recipes-container').append(`<b>Creation ID:</b> ${recipe._id}</br>`)
@@ -58,13 +59,15 @@ const indexAllRecipeSuccess = function (response) {
 
 // Index-All Failure Response
 const indexAllRecipeFailure = function (error) {
+  $('form').trigger('reset')
   $('#message').text('We were unable to display creations. Please try again. ' + error.message)
-  $('#message').css('color', 'red')
+  $('#message').css('color', 'yellow')
 }
 
 // Show Success Response
 const showRecipeSuccess = function (response) {
   const recipeHtml = ''
+  $('form').trigger('reset')
   $('#recipes-container').html(recipeHtml)
   $('#recipes-container').append(`
     </br></br>Creation Name: ${response.recipe.title}</br>
@@ -82,13 +85,14 @@ const showRecipeSuccess = function (response) {
 
 // Show Failure Response
 const showRecipeFailure = function (error) {
+  $('form').trigger('reset')
   $('#message').text('We were unable to display creations. Please try again. ' + error.message)
-  $('#message').css('color', 'red')
+  $('#message').css('color', 'yellow')
 }
 
 // Update Success Response
 const updateRecipeSuccess = function (response) {
-  // $('form').trigger('reset')
+  $('form').trigger('reset')
   $('#message').css('color', 'yellow')
   const recipeHTML = (`
     <div>
@@ -99,8 +103,9 @@ const updateRecipeSuccess = function (response) {
 
 // Update Failure Response
 const updateRecipeFailure = function (error) {
+  $('form').trigger('reset')
   $('#message').text('We were unable to update a new creation. ' + error.message)
-  $('#message').css('color', 'red')
+  $('#message').css('color', 'yellow')
 }
 
 // Delete Success Response
@@ -118,7 +123,7 @@ const destroyRecipeSuccess = function () {
 const destroyRecipeFailure = function (error) {
   $('form').trigger('reset')
   $('#message').text('We were unable to delete your creation. ' + error.message)
-  $('#message').css('color', 'red')
+  $('#message').css('color', 'yellow')
 }
 
 module.exports = {
