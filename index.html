@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      </br>  </br>
+      <h1> Good Grounds </h1>
+
+      <h2 id="message"></h2>
+      <h3 id="recipes-container"></h3></br>  </br>
+
+
+<!-- Sign-Up -->
+  <div class="unauthenticated">
+      </br>  </br>
+    <span><form id="sign-up">
+      <input name="credentials[email]" placeholder="email" type="text" />
+      <input name="credentials[password]" placeholder="password" type="password" />
+      <input name="credentials[password_confirmation]" placeholder="confirm password" type="password" />
+      <button type="submit">Sign Up</button>
+    </form></span>
+      </br>
+
+<!-- Sign-In -->
+      <form id="sign-in">
+      <input name="credentials[email]" placeholder="email" type="text" />
+      <input name="credentials[password]" placeholder="password" type="password" />
+      <button type="submit">Sign In</button>
+    </form>
+      </br>
+  </div>
+
+
+<!-- Change-Password -->
+  <div class="authenticated">
+    <span><form id="change-password">
+      <input name="passwords[old]" placeholder="old password" type="password" />
+      <input name="passwords[new]" placeholder="new password" type="password" />
+      <button type="submit">Change Password!</button>
+    </form></span>
+
+
+
+<!-- Create -->
+  <form id="create-recipe">
+    <textarea rows="1" cols="60" name="recipe[title]" placeholder="Name of your Creation" type="text"></textarea></br>
+    <textarea rows="1" cols="60" name="recipe[method]" placeholder="Brewing Method" type="text"></textarea></br>
+    <textarea rows="5" cols="60" name="recipe[description]" placeholder="Description" type="text"></textarea></br>
+    <textarea rows="5" cols="60" name="recipe[ingredients]" placeholder="List your Ingredients" type="text"></textarea></br>
+    <button type="submit">Make a New Creation!</button>
+  </form>
+
+<!-- Show -->
+  <form id="show-recipe">
+    <input name="recipe[id]" type="text" placeholder="Recipe ID" /></br></br>
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Update -->
+    <form id="update-recipe">
+      <textarea rows="1" cols="60" name="recipe[id]" placeholder="ID for Recipe" type="text"></textarea></br>
+      <textarea rows="1" cols="60" name="recipe[title]" placeholder="New Name For Your Creation?" type="text"></textarea></br>
+      <textarea rows="1" cols="60" name="recipe[method]" placeholder="New Brewing Method?" type="text"></textarea></br>
+      <textarea rows="5" cols="60" name="recipe[description]" placeholder="New Description?" type="text"></textarea></br>
+      <textarea rows="5" cols="60" name="recipe[ingredients]" placeholder="New List Of Ingredients?" type="text"></textarea></br>
+    <button type="submit">Edit an Existing Creation!</button>
+    </form>
+
+<!-- Destroy -->
+    <form id="destroy-recipe">
+      <input name="recipe[id]" placeholder="ID for Recipe" type="text" />
+       <button type="submit">Delete a Creation!</button>
+     </form>
+
+<!-- Main Menu -->
+    </br><button id="main-menu">Main Menu</button></br></br></br>
+
+    <!-- Change Password Button -->
+          <button id="password-button">Change Password</button></br></br></br>
+
+     <!-- Sign-Out -->
+         <button id="sign-out">Sign Out</button></br></br></br>
+
+     <!-- Index-One -->
+             <button type="button" id="index-user">Explore Your Creations</button></br></br>
+
+     <!-- Index-All -->
+             <button type="button" id="index-all">Explore All Creations</button></br></br>
+
+    <!-- Create Button -->
+     <button id="create-button">Make a New Creation</button></br></br>
+    <!-- Show Button -->
+     <button id="show-button">Find A Creation</button></br></br>
+    <!-- Update Button -->
+     <button id="update-button">Edit A Creation</button></br></br>
+    <!-- Delete Button -->
+     <button id="destroy-button">Delete A Creation</button></br></br></br>
+
+  </div>
+    </body>
+</html>
